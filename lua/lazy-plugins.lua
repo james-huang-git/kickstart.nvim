@@ -48,8 +48,14 @@ require('lazy').setup({
     },
   },
 
+  -- Fugitive is the premier Vim plugin for Git. Or maybe it's the premier Git plugin for Vim?
   {
-    'tpope/vim-fugitive'
+    'tpope/vim-fugitive',
+  },
+
+  -- Enables :GBrowse from fugitive.vim to open GitHub URLs.
+  {
+    'tpope/vim-rhubarb',
   },
 
   -- NOTE: Plugins can also be configured to run Lua code when they are loaded.
