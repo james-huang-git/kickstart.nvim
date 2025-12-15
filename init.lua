@@ -6,6 +6,7 @@ require 'lazy_bootstrap'
 
 require('lazy').setup({
   require 'plugins.guess-indent',
+  require 'plugins.indent-blankline',
   require 'plugins.gitsigns',
   require 'plugins.which-key',
   require 'plugins.telescope',
@@ -23,7 +24,8 @@ require('lazy').setup({
   require 'plugins.snacks',
   require 'plugins.oil',
   require 'plugins.treesitter',
-  -- require 'plugins.indent_line',
+  require 'plugins.nvim-spider',
+  require 'plugins.flash',
   -- require 'plugins.lint',
 }, {
   ui = {

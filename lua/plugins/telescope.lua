@@ -111,8 +111,27 @@ return { -- Fuzzy Finder (files, lsp, etc)
     end, { desc = '[S]earch [/] in Open Files' })
 
     -- Shortcut for searching your Neovim configuration files
-    vim.keymap.set('n', '<leader>sn', function()
+    vim.keymap.set('n', '<leader>sv', function()
       builtin.find_files { cwd = vim.fn.stdpath 'config' }
-    end, { desc = '[S]earch [N]eovim files' })
+    end, { desc = '[S]earch Neo[V]im files' })
+
+    vim.keymap.set('n', '<leader>snf', function()
+      builtin.find_files {
+        cwd = vim.fn.expand '~/Documents/notes',
+        hidden = false,
+        no_ignore = true,
+        prompt_title = 'Search Notes',
+      }
+    end, { desc = '[S]earch Note [F]iles' })
+
+    vim.keymap.set('n', '<leader>sng', function()
+      builtin.find_files {
+        cwd = vim.fn.expand '~/Documents/notes',
+	grep_open_files = true,
+        hidden = false,
+        no_ignore = true,
+        prompt_title = 'Live Notes Grep',
+      }
+    end, { desc = '[S]earch Note [G]rep' })
   end,
 }
